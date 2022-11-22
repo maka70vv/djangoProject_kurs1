@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>"Michalych IT" service</title>
+    <link rel="short icon" type="text/css" href="https://img.icons8.com/pastel-glyph/344/wall-socket--v3.png" />
+    <link href="{%static 'css/style.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+    {%for i in home%}
+      <center>
+        <ul>
+          <li> <span><img src="https://img.icons8.com/cotton/452/wall-socket--v4.png" width = "20" height = "20" border="0" align="left" hspace="3px">"Michalych IT" service</span></li>
+        <li> <a href="/home/" class = "active"><img src="https://img.icons8.com/ios/344/home--v1.png" width = "20" height = "20" border="0" align="left" hspace="8px">Home</a></li>
+        <li><a href="/service/"><img src="https://img.icons8.com/ios/344/online-maintenance-portal.png" width = "20" height = "20" border="0" align="left" hspace="8px">Service</a></li>
+        <li><a href="/guides/"><img src="https://img.icons8.com/fluency-systems-regular/344/how-quest--v2.png" width = "20" height = "20" border="0" align="left" hspace="8px">How to repair</a></li>
+        <li><a href="/about/"><img src="https://img.icons8.com/windows/344/about-us-male--v1.png" width = "20" height = "20" border="0" align="left" hspace="8px">About us</a></li>
+        <li><a href="/contacts/"><img src="https://img.icons8.com/windows/344/call-male.png" width = "20" height = "20" border="0" align="left" hspace="8px">Contacts</a></li>
+        </ul>
+      </center>
+      <tr align="center" >
+        <td colspan="3">
+        <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top"><img src={{i.main_image.url}} width="1400" height = "300" border="0"></td>
+            </tr>
+        </table>	</td>
+      </tr>
+      <tr>
+        <td colspan="3" style="padding-top:5px; "></td>
+      </tr>
+      <tr>
+        <td width="7%">&nbsp;</td>
+        <td width="55%">&nbsp;</td>
+        <td width="38%" align="center" valign="middle">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr  align="center">
+            <td width="98%" class="ourVision"><img src="https://img.icons8.com/ios-glyphs/344/handshake--v1.png" width = "30" height = "30" >Welcome to Our Company Site</td>
+
+          </tr>
+          <tr>
+            <td colspan="4" height="7"  ></td>
+            </tr>
+          <tr align="left" valign="top">
+            <td rowspan="4" align="left" valign="top"><div align="justify" class="content">
+            <table width="90%"  border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                      <td align="center" valign="middle"><div align="justify" class = "selectmenu">{{i.text_welcome}}</div><br>
+                        <a href="/about/" class="floating_button" style="{{ floating_button }}">Read more</a></td>
+                  </tr>
+                </table>
+            </div>
+              <p></p></td>
+            <td rowspan="4" align="center" >&nbsp;</td>
+
+          <tr>
+            <td height="19" align="justify" valign="top" class="content">&nbsp;		</td>
+          </tr>
+        </table>	</td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="1%" height="19">&nbsp;</td>
+            <td width="1%">&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="90%"  border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="15%" height="27" align="left" valign="top" class="ourVision">Call a repairman</td>
+            <td width="36%" rowspan="2" align="left" valign="top"><table width="94%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td ><div align="justify"><span class="guides"><img src="https://img.icons8.com/external-wanicon-lineal-wanicon/344/external-repair-lifestyle-wanicon-lineal-wanicon.png" width = "30" height = "30">Repair guides</span> <br>
+                    <br>
+                        <span class="selectmenu">
+                          <img src="{{i.repair_image.url}}" width = "300" height = "180" border="0" align="right" style="margin-top:-40px; " >
+                      {{i.text_repair}}</span></div>
+                      <span><a href="/guides/" class="floating_button" style="{{ floating_button }}">View more</a></span></td>
+                </tr>
+              </table></td>
+            <td width="25%" align="left" valign="top" class="ourVision"><img src="https://img.icons8.com/material-outlined/344/service.png" width = "30" height = "30">Our Services </td>
+            <td width="20%" align="center" valign="top" class="ourVision"><img src="https://img.icons8.com/ios-glyphs/344/gender-neutral-user.png" width = "30" height = "30">Our Clients </td>
+          </tr>
+          <tr>
+            <td width="20%" height="107" align="left" valign="top" class="selectmenu">
+                {{ i.text_call }}
+                <a href="/form/" class="floating_button" style="{{ floating_button }}">Call</a>
+                <a href="/database/" class="floating_button" style="{{ floating_button }}">Call list</a>
+            </td>
+            <td width="200" align="left" valign="bottom"><p align="left" class="selectmenu">{{i.text_services}}</p>
+                <img src={{i.service_image.url}} width="220" height = "180" border="0" align="center" hspace="10" style="margin-top:0px; " >
+                <span><a href="/service/" class="floating_button" style="{{ floating_button }}">View more</a></span>
+            </td>
+            <td>
+            <center>
+              <dl>
+                <dt class="client_name">{{i.client1}}</dt><br>
+                <dd class="client_info">{{i.client1_info}}</dd><br>
+                <dt class="client_name">{{i.client2}}</dt><br>
+                <dd class="client_info">{{i.client2_info}}</dd><br>
+                <dt class="client_name">{{i.client3}}</dt><br>
+                <dd class="client_info">{{i.client3_info}}</dd><br>
+              </dl>
+            </center>
+              &nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+      <center>
+            <img src={{i.image_down1.url}} width="120" height = "150">
+            <img src={{i.image_down2.url}} width="120" height = "150">
+            <img src={{i.image_down3.url}} width="120" height = "150">
+      </center>
+      <tr>
+        <td colspan="2" align="center" class="footer">
+          <a href="/home/" class="footer">Home</a> |
+          <a href="/about/" class="footer">About Us</a> |
+          <a href="/guides/" class="footer">How to repair</a> |
+          <a href="/service/" class="footer">Services</a> |
+          <a href="/contact/" class="footer">Contact Us</a>	</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td colspan="2" align="center"  class="footer"><center><p style="font:normal 11px arial; color:#b1b1b1; display:inline;">Made by <a href="https://www.inai.kg" target="_blank" style="font-size:11px;color:#b1b1b1"> INAI</a> students</p></center></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td colspan="2" align="right"  class="footer"><span style="font-size: 10px;"></span></td>
+      </tr>
+    </table>
+    {%endfor%}
+</body>
+</html>

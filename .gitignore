@@ -1,0 +1,10 @@
+.idea
+venv
+__pychache__/
+*py[cod]
+*$py.class
+*.so
+media
+media2
+db.sqlite3
+djangoProject/secret.py
