@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+app_name = 'users'
 urlpatterns = [
     path('about/', views.about, name='about'),
     path('contacts/', views.contact, name='contacts'),
@@ -8,6 +8,8 @@ urlpatterns = [
     path('service/', views.service, name='service'),
     path('form/', views.add_form, name='form'),
     path('form/postuser/', views.add_form, name='postuser'),
-    path('database/', views.data_form, name='data'),
+    path('database/', views.Data_form.as_view(), name='data'),
+    path('database_detail/<int:id>/', views.DataDetailView.as_view(), name='show_detail'),
+    path('login/', views.user_login, name='login'),
     path('guides/', views.guides, name='guides'),
 ]

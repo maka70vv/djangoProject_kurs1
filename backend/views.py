@@ -1,7 +1,27 @@
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.views import LoginView
 from django.forms import forms
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views import generic
+from django.urls import reverse
 from . import models, forms
+from django.contrib.auth import authenticate, login
+from .forms import LoginForm
+
+def user_login(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            user = authenticate(username=cd['username'], password=cd['password'])
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return render(request, 'login_success.html', {'form': form})
+    else:
+        form = LoginForm()
+    return render(request, 'login.html', {'form': form})
 
 
 # Create your views here.
@@ -36,12 +56,24 @@ def add_form(request):
         form = forms.Form()
     return render(request, 'add_form.html', {'form': form})
 
-def data_form(request):
-    data = models.Form.objects.all()
-    return render(request, 'form_data.html', {'data': data})
+
+
+class Data_form(generic.ListView):
+    template_name = 'form_data.html'
+    queryset = models.Form.objects.all()
+
+    def get_queryset(self):
+        return models.Form.objects.all()
+
+class DataDetailView(generic.DetailView):
+    template_name = 'details.html'
+
+    def get_object(self, **kwargs):
+        data_id = self.kwargs.get('id')
+        return get_object_or_404(models.Form, id=data_id)
 
 #For guides
 def guides(request):
     guides = models.Guides.objects.all()
-    return render(request, 'repair.html', {'guides' : guides})
+    return render(request, 'repair.html', {'guides': guides})
 

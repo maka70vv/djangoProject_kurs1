@@ -2,7 +2,8 @@ body{
 	background: #FFFAFA url(https://img.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg?w=2000);
 	}
 
-    span{
+
+span{
         font-family: "Poppins", sans-serif;
         color: white;
         font-weight: bold;
@@ -40,7 +41,7 @@ li a {
     text-align: center;
     padding: 14px 50px;
     text-decoration: none;
-    font-family: Verdana;
+    font-family: Verdana, sans-serif;
     font-size:14px;
 }
 li a:hover {
@@ -77,7 +78,7 @@ li a:hover {
 		font-size:17px;
 		color:#000;
 		margin: 15px 30px;
-		font-weight: semi-bold;
+		font-weight: normal;
 }
 .price {
   width: 500px;
@@ -139,14 +140,14 @@ li a:hover {
 }
 
 .link{
-		font-family:Verdana;
+    font-family: Verdana, sans-serif;
 		font-size:15px;
 		color:#FF4500;
 		margin: 15px 30px;
 }
 
 .call_title{
-        font-family: Russo One;
+    font-family: "Bookman Old Style", sans-serif;
         color: black;
         font-weight: bold;
         font-size:50px;
@@ -312,9 +313,9 @@ li a:hover {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+   box-shadow:inset 2px 2px 2px 0 rgba(255,255,255,.5),
+   7px 7px 20px 0 rgba(0,0,0,.1),
+   4px 4px 5px 0 rgba(0,0,0,.1);
   outline: none;
 }
 form {
@@ -339,7 +340,7 @@ form {
 
 .send:hover {
   background: #4082f5;
-  box-shadow: 0px 4px 35px -5px #4082f5;
+  box-shadow: 0 4px 35px -5px #4082f5;
   cursor: pointer;
 }
 

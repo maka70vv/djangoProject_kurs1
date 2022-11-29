@@ -22,33 +22,44 @@
          </ul>
      </center>
      <center>
-         {% for i in object_list %}
+         {% if request.user.is_authenticated and request.user.is_staff %}
              <hr class="hr-shelf">
              <div class="selectmenu">
-                <h2>Client`s name: {{i.name}}</h2>
-                <p>Broken: {{i.broken}}</p>
-                <p>Date : {{i.date}}</p>
-             <a href="/database_detail/{{i.id}}">More...</a>
+                 <h2>Client`s name: {{object.name}}</h2>
+                 <p>Phone: {{object.address}}</p>
+                 <p>Phone: {{object.phone}}</p>
+                 <p>Broken: {{object.broken}}</p>
+                 <p>Date : {{object.date}}</p>
              </div>
              <hr class="hr-shelf">
-         {% endfor %}
-     </center>
+         </center>
+    {% else %}
+     <div class="center">
+         <h2>You don`t have enough roots to view this information</h2>
+        <center><a href="/home/" class="floating_button" style="{{ floating_button }}">Home</a>
+        <a href="/login/" class="floating_button" style="{{ floating_button }}">Log in</a></center>
+     </div>
+    {% endif %}
     <br>
-        <tr>
-            <td colspan="2" align="center" class="footer">
-                    <a href="/home/" class="footer">Home</a> |
-                    <a href="/about/" class="footer">About Us</a> |
-                    <a href="/guides/" class="footer">How to repair</a> |
-                    <a href="/service/" class="footer">Services</a> |
-                    <a href="/contacts/" class="footer">Contact Us</a>	</td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center"  class="footer"><center><p style="font:normal 11px arial; color:#b1b1b1; display:inline;">Made by <a href="https://www.inai.kg" target="_blank" style="font-size:11px;color:#b1b1b1"> INAI</a> students</p></center></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="right"  class="footer"><span style="font-size: 10px;"></span></td>
-        </tr>
-        </center>
+        <div class="ending">
+            <tr>
+                <td colspan="2" align="center" class="footer">
+                        <a href="/home/" class="footer">Home</a> |
+                        <a href="/about/" class="footer">About Us</a> |
+                        <a href="/guides/" class="footer">How to repair</a> |
+                        <a href="/service/" class="footer">Services</a> |
+                        <a href="/contacts/" class="footer">Contact Us</a>	</td>
+            </tr>
+        </div>
+       <div class="ending_link">
+            <tr>
+                <td colspan="2" align="center"  class="footer"><center><p style="font:normal 11px arial; color:#b1b1b1; display:inline;">Made by <a href="https://www.inai.kg" target="_blank" style="font-size:11px;color:#b1b1b1"> INAI</a> students</p></center></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right"  class="footer"><span style="font-size: 10px;"></span></td>
+            </tr>
+            </center>
+       </div>
 {% endlanguage %}
 </body>
 </html>
