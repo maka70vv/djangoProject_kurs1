@@ -101,6 +101,7 @@ class Contact(models.Model):
 
 
 class Guides(models.Model):
+    text = models.TextField(null=True)
     video1 = models.URLField()
     video2 = models.URLField()
     video3 = models.URLField()
