@@ -27,7 +27,7 @@
              <div class="selectmenu">
                  <h2>Client`s name: {{object.name}}</h2>
                  <p>Phone: {{object.address}}</p>
-                 <p>Phone: {{object.phone}}</p>
+                 <p>Phone: <a href="tel:{{object.phone}}">{{ object.phone }}</a></p>
                  <p>Broken: {{object.broken}}</p>
                  <p>Date : {{object.date}}</p>
              </div>
@@ -36,7 +36,7 @@
     {% else %}
      <div class="center">
          <h2>You don`t have enough roots to view this information</h2>
-        <center><a href="/home/" class="floating_button" style="{{ floating_button }}">Home</a>
+        <center><a href="/" class="floating_button" style="{{ floating_button }}">Home</a>
         <a href="/login/" class="floating_button" style="{{ floating_button }}">Log in</a></center>
      </div>
     {% endif %}
@@ -44,7 +44,7 @@
         <div class="ending">
             <tr>
                 <td colspan="2" align="center" class="footer">
-                        <a href="/home/" class="footer">Home</a> |
+                        <a href="/" class="footer">Home</a> |
                         <a href="/about/" class="footer">About Us</a> |
                         <a href="/guides/" class="footer">How to repair</a> |
                         <a href="/service/" class="footer">Services</a> |

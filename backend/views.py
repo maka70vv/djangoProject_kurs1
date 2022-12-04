@@ -1,10 +1,6 @@
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.views import LoginView
 from django.forms import forms
-from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from django.urls import reverse
 from . import models, forms
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm
@@ -28,7 +24,7 @@ def user_login(request):
 #About us
 def about(request):
     about = models.About_us.objects.all()
-    return render(request, 'about.html', {'about':about})
+    return render(request, 'about.html', {'about': about})
 
 #For contacts
 def contact(request):
@@ -42,7 +38,7 @@ def home(request):
 
 def service(request):
     service = models.Service_content.objects.all()
-    return render(request, 'service.html', {'service':service})
+    return render(request, 'service.html', {'service': service})
 
 def add_form(request):
     method = request.method

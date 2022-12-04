@@ -26,31 +26,27 @@
               <form method="post" action="postuser/" enctype="multipart/form-data">
                   {% csrf_token %}
                   {{form.as_p}}
-                  <button class="send">
-                      Send
-                  </button>
+                  <button class="send"> Send</button>
                 </form>
           </center>
       </div>
-    <tr>
-        <td>&nbsp;</td>
-        <td colspan="2" align="center" class="footer">
-                <a href="/home/" class="footer">Home</a> |
-                <a href="/about/" class="footer">About Us</a> |
-                <a href="/guides/" class="footer">How to repair</a> |
-                <a href="/service/" class="footer">Services</a> |
-                <a href="/contacts/" class="footer">Contact Us</a>	</td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td colspan="2" align="center"  class="footer"><center><p style="font:normal 11px arial; color:#b1b1b1; display:inline;">Made by <a href="https://www.inai.kg" target="_blank" style="font-size:11px;color:#b1b1b1"> INAI</a> students</p></center></td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td colspan="2" align="right"  class="footer"><span style="font-size: 10px;"></span></td>
-    </tr>
-
-    </center>
-
+    <div class="ending">
+        <tr>
+            <td colspan="2" align="center" class="footer">
+                    <a href="/" class="footer">Home</a> |
+                    <a href="/about/" class="footer">About Us</a> |
+                    <a href="/guides/" class="footer">How to repair</a> |
+                    <a href="/service/" class="footer">Services</a> |
+                    <a href="/contacts/" class="footer">Contact Us</a>	</td>
+        </tr>
+    </div>
+   <div class="ending_link">
+        <tr>
+            <td colspan="2" align="center"  class="footer"><center><p style="font:normal 11px arial; color:#b1b1b1; display:inline;">Made by <a href="https://www.inai.kg" target="_blank" style="font-size:11px;color:#b1b1b1"> INAI</a> students</p></center></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right"  class="footer"><span style="font-size: 10px;"></span></td>
+        </tr>
+    </div>
 </body>
 </html>
