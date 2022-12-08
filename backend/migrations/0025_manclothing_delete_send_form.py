@@ -6,21 +6,41 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0024_send_form_delete_send'),
+        ("backend", "0024_send_form_delete_send"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ManClothing',
+            name="ManClothing",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=60)),
-                ('description', models.TextField(null=True)),
-                ('image', models.ImageField(upload_to='')),
-                ('type_clothing', models.CharField(choices=[('Jeans', 'Jeans'), ('T-Shirt', 'T-Shirt'), ('Houdey', 'Houdey'), ('Pullower', 'Pullower'), ('Suit', 'Suit')], max_length=60)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=60)),
+                ("description", models.TextField(null=True)),
+                ("image", models.ImageField(upload_to="")),
+                (
+                    "type_clothing",
+                    models.CharField(
+                        choices=[
+                            ("Jeans", "Jeans"),
+                            ("T-Shirt", "T-Shirt"),
+                            ("Houdey", "Houdey"),
+                            ("Pullower", "Pullower"),
+                            ("Suit", "Suit"),
+                        ],
+                        max_length=60,
+                    ),
+                ),
             ],
         ),
         migrations.DeleteModel(
-            name='Send_form',
+            name="Send_form",
         ),
     ]

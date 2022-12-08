@@ -6,23 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0028_guides'),
+        ("backend", "0028_guides"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='service_content',
-            name='image_down1',
-            field=models.ImageField(null=True, upload_to=''),
+            model_name="service_content",
+            name="image_down1",
+            field=models.ImageField(null=True, upload_to=""),
         ),
         migrations.AddField(
-            model_name='service_content',
-            name='image_down2',
-            field=models.ImageField(null=True, upload_to=''),
+            model_name="service_content",
+            name="image_down2",
+            field=models.ImageField(null=True, upload_to=""),
         ),
         migrations.AddField(
-            model_name='service_content',
-            name='image_down3',
-            field=models.ImageField(null=True, upload_to=''),
+            model_name="service_content",
+            name="image_down3",
+            field=models.ImageField(null=True, upload_to=""),
         ),
     ]

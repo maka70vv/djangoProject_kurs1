@@ -16,9 +16,9 @@ class Home(models.Model):
     client3_info = models.TextField()
     repair_image = models.ImageField()
     service_image = models.ImageField()
-    image_down1 = models.ImageField(upload_to='')
-    image_down2 = models.ImageField(upload_to='')
-    image_down3 = models.ImageField(upload_to='')
+    image_down1 = models.ImageField(upload_to="")
+    image_down2 = models.ImageField(upload_to="")
+    image_down3 = models.ImageField(upload_to="")
 
 
 class Service_content(models.Model):
@@ -40,26 +40,25 @@ class Service_content(models.Model):
     price7 = models.CharField(max_length=20, null=True)
     price8 = models.CharField(max_length=20, null=True)
     price9 = models.CharField(max_length=20, null=True)
-    image1 = models.ImageField(null=True, upload_to='')
-    image2 = models.ImageField(null=True, upload_to='')
+    image1 = models.ImageField(null=True, upload_to="")
+    image2 = models.ImageField(null=True, upload_to="")
     text_content = models.TextField(null=True)
-    image_down1 = models.ImageField(null=True, upload_to='')
-    image_down2 = models.ImageField(null=True, upload_to='')
-    image_down3 = models.ImageField(null=True, upload_to='')
-
+    image_down1 = models.ImageField(null=True, upload_to="")
+    image_down2 = models.ImageField(null=True, upload_to="")
+    image_down3 = models.ImageField(null=True, upload_to="")
 
 
 class Form(models.Model):
     BROKEN = (
-        ('TV', 'TV'),
-        ('Refrigerator', 'Refrigerator'),
-        ('Microwave ovens', 'Microwave ovens'),
-        ('Washing machine', 'Washing machine'),
-        ('Electric cooker', 'Electric cooker'),
-        ('Gas cooker', 'Gas cooker'),
-        ('Vacuum cleaners', 'Vacuum cleaners'),
-        ('Irons', 'Irons'),
-        ('Electric kettle', 'Electric kettle'),
+        ("TV", "TV"),
+        ("Refrigerator", "Refrigerator"),
+        ("Microwave ovens", "Microwave ovens"),
+        ("Washing machine", "Washing machine"),
+        ("Electric cooker", "Electric cooker"),
+        ("Gas cooker", "Gas cooker"),
+        ("Vacuum cleaners", "Vacuum cleaners"),
+        ("Irons", "Irons"),
+        ("Electric kettle", "Electric kettle"),
     )
     name = models.CharField(max_length=60)
     address = models.CharField(max_length=150)
@@ -72,16 +71,16 @@ class Form(models.Model):
 
 
 class About_us(models.Model):
-    image1 = models.ImageField(upload_to='')
-    image2 = models.ImageField(upload_to='')
-    image3 = models.ImageField(upload_to='')
+    image1 = models.ImageField(upload_to="")
+    image2 = models.ImageField(upload_to="")
+    image3 = models.ImageField(upload_to="")
     text1_1 = models.TextField()
     text1_2 = models.TextField()
     text2_1 = models.TextField()
     text2_2 = models.TextField()
-    image_down1 = models.ImageField(upload_to='')
-    image_down2 = models.ImageField(upload_to='')
-    image_down3 = models.ImageField(upload_to='')
+    image_down1 = models.ImageField(upload_to="")
+    image_down2 = models.ImageField(upload_to="")
+    image_down3 = models.ImageField(upload_to="")
 
 
 class Contact(models.Model):
@@ -95,11 +94,10 @@ class Contact(models.Model):
     phone_number3 = models.CharField(max_length=15)
     address = models.CharField(max_length=100, null=True)
     link_address = models.URLField(null=True)
-    image_mem = models.ImageField(upload_to='')
-    email = models.EmailField()
-    image_down1 = models.ImageField(upload_to='')
-    image_down2 = models.ImageField(upload_to='')
-    image_down3 = models.ImageField(upload_to='')
+    image_mem = models.ImageField(upload_to="")
+    image_down1 = models.ImageField(upload_to="")
+    image_down2 = models.ImageField(upload_to="")
+    image_down3 = models.ImageField(upload_to="")
 
 
 class Guides(models.Model):
@@ -108,6 +106,6 @@ class Guides(models.Model):
     video2 = models.URLField()
     video3 = models.URLField()
     video4 = models.URLField()
-    image_down1 = models.ImageField(upload_to='')
-    image_down2 = models.ImageField(upload_to='')
-    image_down3 = models.ImageField(upload_to='')
+    image_down1 = models.ImageField(upload_to="")
+    image_down2 = models.ImageField(upload_to="")
+    image_down3 = models.ImageField(upload_to="")

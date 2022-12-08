@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0015_main_delete_home'),
+        ("backend", "0015_main_delete_home"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='Main',
-            new_name='Main_m',
+            old_name="Main",
+            new_name="Main_m",
         ),
     ]

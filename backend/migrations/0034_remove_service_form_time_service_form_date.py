@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0033_service_form_time'),
+        ("backend", "0033_service_form_time"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='service_form',
-            name='time',
+            model_name="service_form",
+            name="time",
         ),
         migrations.AddField(
-            model_name='service_form',
-            name='date',
+            model_name="service_form",
+            name="date",
             field=models.DateTimeField(null=True),
         ),
     ]

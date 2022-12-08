@@ -22,7 +22,7 @@
 </center>
 {% for i in guides %}
     <center><h1 class="call_title">How to repair</h1>
-    <p class="content1"><img src="https://img.icons8.com/external-wanicon-lineal-wanicon/344/external-repair-lifestyle-wanicon-lineal-wanicon.png" width = "40" height = "40">{{ i.text }}</p></center>
+        <p class="content1"><img src="https://img.icons8.com/external-wanicon-lineal-wanicon/344/external-repair-lifestyle-wanicon-lineal-wanicon.png" width = "40" height = "40">{{ i.text }}</p></center>
     <center>
         <iframe src="{{ i.video1 }}" width="800" height="420" ></iframe>
         <iframe src="{{i.video2}}" width="800" height="420" ></iframe>
@@ -30,26 +30,26 @@
         <iframe src="{{i.video4}}" width="800" height="420" ></iframe>
     </center>
     <p><h3 align ="center">Service center "Michalych IT" </h3></p>
-        <center>
-            <img src="{{i.image_down1.url}}" width = "120" height = "150">
-            <img src="{{i.image_down2.url}}" width = "120" height = "150">
-            <img src="{{ i.image_down3.url }}" width = "120" height = "150">
-        </center>
-        <table>
-            <tr align="center">
-            <tr>
-                <td>&nbsp;</td>
-                <td colspan="2" align="center" class="footer">
-                    <a href="/" class="footer">Home</a> |
-                    <a href="/about/" class="footer">About Us</a> |
-                    <a href="/guides/" class="footer">How to repair</a> |
-                    <a href="/service/" class="footer">Services</a> |
-                    <a href="/contacts/" class="footer">Contact Us</a>	</td>
-            </tr>
-        </table>
+    <center>
+        <img src="{{i.image_down1.url}}" width = "120" height = "150">
+        <img src="{{i.image_down2.url}}" width = "120" height = "150">
+        <img src="{{ i.image_down3.url }}" width = "120" height = "150">
+    </center>
+    <table>
+        <tr align="center">
         <tr>
-            <td colspan="2" align="center"  class="footer"><center><p style="font:normal 11px arial; color:#b1b1b1; display:inline;">Made by <a href="https://www.inai.kg" target="_blank" style="font-size:11px;color::#b1b1b1"> INAI</a> students</p></center></td>
+            <td>&nbsp;</td>
+            <td colspan="2" align="center" class="footer">
+                <a href="/" class="footer">Home</a> |
+                <a href="/about/" class="footer">About Us</a> |
+                <a href="/guides/" class="footer">How to repair</a> |
+                <a href="/service/" class="footer">Services</a> |
+                <a href="/contacts/" class="footer">Contact Us</a>	</td>
         </tr>
+    </table>
+    <tr>
+        <td colspan="2" align="center"  class="footer"><center><p style="font:normal 11px arial; color:#b1b1b1; display:inline;">Made by <a href="https://www.inai.kg" target="_blank" style="font-size:11px;color::#b1b1b1"> INAI</a> students</p></center></td>
+    </tr>
 
 {% endfor %}
 </body>

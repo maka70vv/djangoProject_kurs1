@@ -6,22 +6,46 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0034_remove_service_form_time_service_form_date'),
+        ("backend", "0034_remove_service_form_time_service_form_date"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Form',
+            name="Form",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=60)),
-                ('address', models.CharField(max_length=150)),
-                ('phone', models.CharField(max_length=13)),
-                ('broken', models.CharField(choices=[('TV', 'TV'), ('Refrigerator', 'Refrigerator'), ('Microwave ovens', 'Microwave ovens'), ('Washing machine', 'Washing machine'), ('Electric cooker', 'Electric cooker'), ('Gas cooker', 'Gas cooker'), ('Vacuum cleaners', 'Vacuum cleaners'), ('Irons', 'Irons'), ('Electric kettle', 'Electric kettle')], max_length=60)),
-                ('date', models.DateField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=60)),
+                ("address", models.CharField(max_length=150)),
+                ("phone", models.CharField(max_length=13)),
+                (
+                    "broken",
+                    models.CharField(
+                        choices=[
+                            ("TV", "TV"),
+                            ("Refrigerator", "Refrigerator"),
+                            ("Microwave ovens", "Microwave ovens"),
+                            ("Washing machine", "Washing machine"),
+                            ("Electric cooker", "Electric cooker"),
+                            ("Gas cooker", "Gas cooker"),
+                            ("Vacuum cleaners", "Vacuum cleaners"),
+                            ("Irons", "Irons"),
+                            ("Electric kettle", "Electric kettle"),
+                        ],
+                        max_length=60,
+                    ),
+                ),
+                ("date", models.DateField()),
             ],
         ),
         migrations.DeleteModel(
-            name='Service_form',
+            name="Service_form",
         ),
     ]

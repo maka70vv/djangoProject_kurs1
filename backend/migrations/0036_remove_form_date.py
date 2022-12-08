@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0035_form_delete_service_form'),
+        ("backend", "0035_form_delete_service_form"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='form',
-            name='date',
+            model_name="form",
+            name="date",
         ),
     ]

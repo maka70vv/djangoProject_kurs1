@@ -5,7 +5,8 @@ from . import models
 class Form(forms.ModelForm):
     class Meta:
         model = models.Form
-        fields = '__all__'
+        fields = "__all__"
+
 
 class LoginForm(forms.Form):
     username = forms.CharField()

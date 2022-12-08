@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0043_remove_contact_adres_contact_address'),
+        ("backend", "0043_remove_contact_adres_contact_address"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='contact',
-            name='link_address',
+            model_name="contact",
+            name="link_address",
             field=models.URLField(null=True),
         ),
         migrations.AddField(
-            model_name='contact',
-            name='link_inst',
+            model_name="contact",
+            name="link_inst",
             field=models.URLField(null=True),
         ),
     ]

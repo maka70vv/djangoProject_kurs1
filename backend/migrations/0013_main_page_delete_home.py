@@ -6,29 +6,37 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0012_about_us_delete_about'),
+        ("backend", "0012_about_us_delete_about"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Main_page',
+            name="Main_page",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('main_image', models.ImageField(upload_to='')),
-                ('text_welcome', models.TextField()),
-                ('text_repair', models.TextField()),
-                ('text_services', models.TextField()),
-                ('client1', models.CharField(max_length=100)),
-                ('client1_info', models.TextField()),
-                ('client2', models.CharField(max_length=100)),
-                ('client2_info', models.TextField()),
-                ('client3', models.CharField(max_length=100)),
-                ('client3_info', models.TextField()),
-                ('repair_image', models.ImageField(upload_to='')),
-                ('service_image', models.ImageField(upload_to='')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("main_image", models.ImageField(upload_to="")),
+                ("text_welcome", models.TextField()),
+                ("text_repair", models.TextField()),
+                ("text_services", models.TextField()),
+                ("client1", models.CharField(max_length=100)),
+                ("client1_info", models.TextField()),
+                ("client2", models.CharField(max_length=100)),
+                ("client2_info", models.TextField()),
+                ("client3", models.CharField(max_length=100)),
+                ("client3_info", models.TextField()),
+                ("repair_image", models.ImageField(upload_to="")),
+                ("service_image", models.ImageField(upload_to="")),
             ],
         ),
         migrations.DeleteModel(
-            name='Home',
+            name="Home",
         ),
     ]

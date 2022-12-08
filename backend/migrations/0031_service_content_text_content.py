@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0030_service_content_image1_service_content_image2'),
+        ("backend", "0030_service_content_image1_service_content_image2"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='service_content',
-            name='text_content',
+            model_name="service_content",
+            name="text_content",
             field=models.TextField(null=True),
         ),
     ]

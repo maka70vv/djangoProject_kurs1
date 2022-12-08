@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0037_form_created_date'),
+        ("backend", "0037_form_created_date"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='form',
-            name='created_date',
+            model_name="form",
+            name="created_date",
         ),
         migrations.AddField(
-            model_name='form',
-            name='date',
+            model_name="form",
+            name="date",
             field=models.DateField(auto_now_add=True, null=True),
         ),
     ]

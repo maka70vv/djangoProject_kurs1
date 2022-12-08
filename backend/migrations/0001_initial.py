@@ -7,32 +7,47 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='About',
+            name="About",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image1', models.ImageField(upload_to='')),
-                ('image2', models.ImageField(upload_to='')),
-                ('image3', models.ImageField(upload_to='')),
-                ('partners', models.TextField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image1", models.ImageField(upload_to="")),
+                ("image2", models.ImageField(upload_to="")),
+                ("image3", models.ImageField(upload_to="")),
+                ("partners", models.TextField()),
             ],
         ),
         migrations.CreateModel(
-            name='Contacts',
+            name="Contacts",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name1', models.CharField(max_length=50, null=True)),
-                ('name2', models.CharField(max_length=50, null=True)),
-                ('name3', models.CharField(max_length=50, null=True)),
-                ('insta', models.CharField(max_length=40, null=True)),
-                ('phone_number1', models.CharField(max_length=15)),
-                ('phone_number2', models.CharField(max_length=15)),
-                ('phone_number3', models.CharField(max_length=15)),
-                ('email', models.EmailField(max_length=254)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name1", models.CharField(max_length=50, null=True)),
+                ("name2", models.CharField(max_length=50, null=True)),
+                ("name3", models.CharField(max_length=50, null=True)),
+                ("insta", models.CharField(max_length=40, null=True)),
+                ("phone_number1", models.CharField(max_length=15)),
+                ("phone_number2", models.CharField(max_length=15)),
+                ("phone_number3", models.CharField(max_length=15)),
+                ("email", models.EmailField(max_length=254)),
             ],
         ),
     ]

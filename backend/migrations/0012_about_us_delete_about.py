@@ -6,27 +6,35 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0011_about_home_delete_about_us'),
+        ("backend", "0011_about_home_delete_about_us"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='About_us',
+            name="About_us",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image1', models.ImageField(upload_to='')),
-                ('image2', models.ImageField(upload_to='')),
-                ('image3', models.ImageField(upload_to='')),
-                ('text1_1', models.TextField()),
-                ('text1_2', models.TextField()),
-                ('text2_1', models.TextField()),
-                ('text2_2', models.TextField()),
-                ('image_down1', models.ImageField(upload_to='')),
-                ('image_down2', models.ImageField(upload_to='')),
-                ('image_down3', models.ImageField(upload_to='')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image1", models.ImageField(upload_to="")),
+                ("image2", models.ImageField(upload_to="")),
+                ("image3", models.ImageField(upload_to="")),
+                ("text1_1", models.TextField()),
+                ("text1_2", models.TextField()),
+                ("text2_1", models.TextField()),
+                ("text2_2", models.TextField()),
+                ("image_down1", models.ImageField(upload_to="")),
+                ("image_down2", models.ImageField(upload_to="")),
+                ("image_down3", models.ImageField(upload_to="")),
             ],
         ),
         migrations.DeleteModel(
-            name='About',
+            name="About",
         ),
     ]

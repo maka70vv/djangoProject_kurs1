@@ -6,11 +6,11 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0017_form_rename_main_m_main'),
+        ("backend", "0017_form_rename_main_m_main"),
     ]
 
     operations = [
         migrations.DeleteModel(
-            name='Form',
+            name="Form",
         ),
     ]

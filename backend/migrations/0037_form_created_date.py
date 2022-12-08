@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0036_remove_form_date'),
+        ("backend", "0036_remove_form_date"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='form',
-            name='created_date',
+            model_name="form",
+            name="created_date",
             field=models.DateTimeField(auto_now_add=True, null=True),
         ),
     ]

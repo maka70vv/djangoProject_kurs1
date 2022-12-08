@@ -6,35 +6,51 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0001_initial'),
+        ("backend", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Contact',
+            name="Contact",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name1', models.CharField(max_length=50, null=True)),
-                ('name2', models.CharField(max_length=50, null=True)),
-                ('name3', models.CharField(max_length=50, null=True)),
-                ('insta', models.CharField(max_length=40, null=True)),
-                ('phone_number1', models.CharField(max_length=15)),
-                ('phone_number2', models.CharField(max_length=15)),
-                ('phone_number3', models.CharField(max_length=15)),
-                ('image_mem', models.ImageField(upload_to='')),
-                ('email', models.EmailField(max_length=254)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name1", models.CharField(max_length=50, null=True)),
+                ("name2", models.CharField(max_length=50, null=True)),
+                ("name3", models.CharField(max_length=50, null=True)),
+                ("insta", models.CharField(max_length=40, null=True)),
+                ("phone_number1", models.CharField(max_length=15)),
+                ("phone_number2", models.CharField(max_length=15)),
+                ("phone_number3", models.CharField(max_length=15)),
+                ("image_mem", models.ImageField(upload_to="")),
+                ("email", models.EmailField(max_length=254)),
             ],
         ),
         migrations.CreateModel(
-            name='Down',
+            name="Down",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image1', models.ImageField(upload_to='')),
-                ('image2', models.ImageField(upload_to='')),
-                ('image3', models.ImageField(upload_to='')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image1", models.ImageField(upload_to="")),
+                ("image2", models.ImageField(upload_to="")),
+                ("image3", models.ImageField(upload_to="")),
             ],
         ),
         migrations.DeleteModel(
-            name='Contacts',
+            name="Contacts",
         ),
     ]
