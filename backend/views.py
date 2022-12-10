@@ -73,12 +73,13 @@ class DataDetailView(generic.DetailView):
         data_id = self.kwargs.get("id")
         return get_object_or_404(models.Form, id=data_id)
 
+
 class DataDeleteView(generic.DeleteView):
-    template_name = 'delete.html'
-    success_url = '/database/'
+    template_name = "delete.html"
+    success_url = "/database/"
 
     def get_object(self, **kwargs):
-        data_id = self.kwargs.get('id')
+        data_id = self.kwargs.get("id")
         return get_object_or_404(models.Form, id=data_id)
 
 
