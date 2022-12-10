@@ -10,6 +10,7 @@ urlpatterns = [
     path("form/postuser/", views.add_form, name="postuser"),
     path("database/", views.Data_form.as_view(), name="data"),
     path("database/<int:id>/", views.DataDetailView.as_view(), name="show_detail"),
+    path('database/<int:id>/delete/', views.DataDeleteView.as_view(), name='show_detail'),
     path("login/", views.user_login, name="login"),
     path("guides/", views.guides, name="guides"),
 ]

@@ -30,6 +30,7 @@
                 <p>Phone: <a href="tel:{{object.phone}}">{{ object.phone }}</a></p>
                 <p>Broken: {{object.broken}}</p>
                 <p>Date : {{object.date}}</p>
+                <a href="/database/{{object.id}}/delete" class="floating_button" style="{{ floating_button }}">Done</a>
             </div>
             <hr class="hr-shelf">
             </center>
@@ -37,7 +38,7 @@
             <div class="center">
                 <h2>You don`t have enough rights to view this information</h2>
                 <center><a href="/" class="floating_button" style="{{ floating_button }}">Home</a>
-                    <a href="/login/" class="floating_button" style="{{ floating_button }}">Log in</a></center>
+                    <a href="/login/" class="floating_button" style="{{ floating_button }}">Login</a></center>
             </div>
         {% endif %}
     <br>

@@ -22,19 +22,19 @@ def user_login(request):
 
 
 # Create your views here.
-# About us
+# About us page
 def about(request):
     about = models.About_us.objects.all()
     return render(request, "about.html", {"about": about})
 
 
-# For contacts
+# For contact page
 def contact(request):
     contact = models.Contact.objects.all()
     return render(request, "calling.html", {"contact": contact})
 
 
-# For home
+# For main page
 def home(request):
     home = models.Home.objects.all()
     return render(request, "index.html", {"home": home})
@@ -71,6 +71,14 @@ class DataDetailView(generic.DetailView):
 
     def get_object(self, **kwargs):
         data_id = self.kwargs.get("id")
+        return get_object_or_404(models.Form, id=data_id)
+
+class DataDeleteView(generic.DeleteView):
+    template_name = 'delete.html'
+    success_url = '/database/'
+
+    def get_object(self, **kwargs):
+        data_id = self.kwargs.get('id')
         return get_object_or_404(models.Form, id=data_id)
 
 
