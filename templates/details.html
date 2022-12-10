@@ -22,6 +22,7 @@
         </ul>
     </center>
     <center>
+    <!--The user is logged in and the administrator-->
         {% if request.user.is_authenticated and request.user.is_staff %}
             <hr class="hr-shelf">
             <div class="selectmenu">
@@ -34,6 +35,7 @@
             </div>
             <hr class="hr-shelf">
             </center>
+    <!--The user is not logged in or not an administrator-->
         {% else %}
             <div class="center">
                 <h2>You don`t have enough rights to view this information</h2>

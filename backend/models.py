@@ -2,6 +2,7 @@ from django.db import models
 
 
 # Create your models here.
+#Home Page Elements
 class Home(models.Model):
     main_image = models.ImageField()
     text_welcome = models.TextField()
@@ -21,6 +22,7 @@ class Home(models.Model):
     image_down3 = models.ImageField(upload_to="")
 
 
+#Elements of the Service page
 class Service_content(models.Model):
     repair1 = models.CharField(max_length=100, null=True)
     repair2 = models.CharField(max_length=100, null=True)
@@ -48,6 +50,7 @@ class Service_content(models.Model):
     image_down3 = models.ImageField(null=True, upload_to="")
 
 
+#Elements of the repairman's call form
 class Form(models.Model):
     BROKEN = (
         ("TV", "TV"),
@@ -70,6 +73,7 @@ class Form(models.Model):
         return self.name
 
 
+#Elements of the repairman's call form
 class About_us(models.Model):
     image1 = models.ImageField(upload_to="")
     image2 = models.ImageField(upload_to="")
@@ -83,6 +87,7 @@ class About_us(models.Model):
     image_down3 = models.ImageField(upload_to="")
 
 
+#Contact Page Elements
 class Contact(models.Model):
     name1 = models.CharField(max_length=50, null=True)
     name2 = models.CharField(max_length=50, null=True)
@@ -100,6 +105,7 @@ class Contact(models.Model):
     image_down3 = models.ImageField(upload_to="")
 
 
+#Elements of the guides page
 class Guides(models.Model):
     text = models.TextField(null=True)
     video1 = models.URLField()

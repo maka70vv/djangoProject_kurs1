@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login
 from .forms import LoginForm
 
 
+# For login
 def user_login(request):
     if request.method == "POST":
         form = LoginForm(request.POST)
@@ -21,7 +22,6 @@ def user_login(request):
     return render(request, "login.html", {"form": form})
 
 
-# Create your views here.
 # About us page
 def about(request):
     about = models.About_us.objects.all()
@@ -40,11 +40,13 @@ def home(request):
     return render(request, "index.html", {"home": home})
 
 
+# For service page
 def service(request):
     service = models.Service_content.objects.all()
     return render(request, "service.html", {"service": service})
 
 
+# For calling repairman
 def add_form(request):
     method = request.method
     if method == "POST":
@@ -58,6 +60,7 @@ def add_form(request):
     return render(request, "add_form.html", {"form": form})
 
 
+# For making call list
 class Data_form(generic.ListView):
     template_name = "form_data.html"
     queryset = models.Form.objects.all()
@@ -66,6 +69,7 @@ class Data_form(generic.ListView):
         return models.Form.objects.all()
 
 
+# For view details
 class DataDetailView(generic.DetailView):
     template_name = "details.html"
 
@@ -74,6 +78,7 @@ class DataDetailView(generic.DetailView):
         return get_object_or_404(models.Form, id=data_id)
 
 
+# For delete a call
 class DataDeleteView(generic.DeleteView):
     template_name = "delete.html"
     success_url = "/database/"
@@ -83,7 +88,7 @@ class DataDeleteView(generic.DeleteView):
         return get_object_or_404(models.Form, id=data_id)
 
 
-# For guides
+# For guides page
 def guides(request):
     guides = models.Guides.objects.all()
     return render(request, "repair.html", {"guides": guides})
