@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     path("about/", views.about, name="about"),
     path("contacts/", views.contact, name="contacts"),
-    path("", views.home, name="home"),
+    path("djangoProject_kurs1/", views.home, name="home"),
     path("service/", views.service, name="service"),
     path("form/", views.add_form, name="form"),
     path("form/postuser/", views.add_form, name="postuser"),
